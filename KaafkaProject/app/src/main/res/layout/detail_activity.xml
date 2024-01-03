@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#5F8670">
+
+    <!-- Bagian atas layout dengan ListView dan teks total -->
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+    <LinearLayout
+        android:id="@+id/Tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/topLayout"
+        android:gravity="end">
+        <TextView
+            android:id="@+id/Resto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="She KEMBAR RESTO"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/Tittle"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/Alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cabang Telaga Bestari Jl. Taman Palem Raya No. 27 Sindang Jaya-Tangerang"
+            android:textSize="15sp"
+            android:layout_below="@id/Resto"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/Tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction Date :"
+            android:textSize="16sp"
+            android:layout_below="@id/Alamat"
+            android:layout_gravity="left"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp" />
+
+        <LinearLayout
+            android:id="@+id/topBayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/topLayout"
+            android:gravity="end">
+            <TextView
+                android:id="@+id/textViewTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: Rp. 0"
+                android:textSize="18sp"
+                android:layout_below="@id/listViewDetail"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/textViewPajak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pajak: Rp. 0"
+                android:textSize="18sp"
+                android:layout_below="@id/textViewTotal"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/textViewBayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Bayar: Rp. 0"
+                android:textSize="18sp"
+                android:layout_below="@id/textViewPajak"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Greeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/topBayar"
+            android:gravity="end">
+            <TextView
+                android:id="@+id/Greetings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Di Cek Lagi Yak Pesanannya !"
+                android:textSize="20sp"
+                android:layout_below="@id/listViewDetail"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_below="@id/topBayar"> <!-- Menempatkan bagian bawah di bawah bagian atas -->
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:backgroundTint="#FF9800"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/btnPrint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print"
+                android:backgroundTint="#FF9800"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+

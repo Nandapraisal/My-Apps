@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout_payment_method.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#80000000"
+    android:padding="0dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="#80000000">
+        <!--        INPUT CASH -->
+        <LinearLayout
+            android:id="@+id/inputNominal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#80000000"
+            android:layout_gravity="center"
+            android:visibility="gone">
+            <LinearLayout
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Input Nominal Amount"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:contentDescription="Input"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:contentDescription="Line">
+                </View>
+
+                <EditText
+                    android:id="@+id/nominalCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="    Masukkan Nominal....."
+                    android:alpha="0.2"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:gravity="left"
+                    android:contentDescription="inputNominal"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:contentDescription="Line">
+                </View>
+                <Button
+                    android:id="@+id/confirmNominal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#5F8670"
+                    android:text="Confirm Nominal"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--        BUTTON -->
+
+        <LinearLayout
+            android:id="@+id/btnClick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#3F4E4F"
+            android:layout_gravity="center"
+            android:visibility="visible">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Payment Method"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:contentDescription="selectPayment"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:contentDescription="Line2">
+            </View>
+            <LinearLayout
+                android:id="@+id/btnAll"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/btnCash"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/cash"
+                        android:scaleType="centerInside"
+                        android:background="#3F4E4F"
+                        android:contentDescription="Cash" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </View>
+                    <TextView
+                        android:id="@+id/textCash"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:text="C A S H"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:contentDescription="textCash"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Transfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/btnTransfer"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/transfer"
+                        android:scaleType="centerInside"
+                        android:background="#3F4E4F"
+                        android:contentDescription="Transfer" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </View>
+                    <TextView
+                        android:id="@+id/textTransfer"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:text="TRANSFER"
+                        android:paddingTop="1dp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:contentDescription="textTransfer"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/transfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageButton
+                        android:id="@+id/btnQris"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/qris"
+                        android:scaleType="centerInside"
+                        android:background="#3F4E4F"
+                        android:contentDescription="Qris" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </View>
+                    <TextView
+                        android:id="@+id/textQris"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:text="Q R I S"
+                        android:textStyle="bold"
+                        android:paddingTop="0dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:contentDescription="textQris"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
